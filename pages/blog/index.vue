@@ -14,8 +14,10 @@ const { data: posts } = await useAsyncData("posts", () =>
         :key="post.id"
         :title="post.title"
         :description="post.description"
-        :auteurs="post.auteur"
+        :authors="post.auteurs"
         :image="post.image"
+        :date="formatDate(post.date)"
+        :badge="post.badge"
    />
     
     </UBlogList>
